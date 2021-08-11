@@ -25,7 +25,7 @@ public class CorController {
 		/*a lista de cor tem 3 cores ate aqui, que e os dados que vera
 		 * no geter do controler*/
 	}
-	
+	//coisa
 	@GetMapping
 	public List<Cor> getCores(){//getCores pode ser qualquer nome!
 		return this.cores;

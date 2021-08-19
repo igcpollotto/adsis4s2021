@@ -1,1 +1,485 @@
-{"_type":"export","__export_format":4,"__export_date":"2021-08-12T00:54:12.658Z","__export_source":"insomnia.desktop.app:v2021.4.1","resources":[{"_id":"req_365d8f2f6865467b8a8b2836e452d7dd","parentId":"wrk_103482d5b34647d599ddee06c68eefbe","modified":1628729290154,"created":1628729254321,"url":"localhost:9095/produtos-transientes","name":"POST Produto Transiente","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n  \"id\": \"4\",\n  \"nome\": \"Fubá Mimoso 5kg\",\n  \"preco\": 12.15\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json","id":"pair_45fe5aef55024c5eb2b053026a16a83b"}],"authentication":{},"metaSortKey":-1628729254321,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"wrk_103482d5b34647d599ddee06c68eefbe","parentId":null,"modified":1628728927829,"created":1628728927829,"name":"Insomnia","description":"","scope":"collection","_type":"workspace"},{"_id":"req_2ac018ca60014c36a1a268e66f3642f5","parentId":"wrk_103482d5b34647d599ddee06c68eefbe","modified":1628728965800,"created":1628728954642,"url":"localhost:9095/produtos-transientes","name":"GET Produtos Transientes","description":"","method":"GET","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1628728954643,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_2874bbcb2edb446fb9f7c6618fae31ce","parentId":"wrk_103482d5b34647d599ddee06c68eefbe","modified":1628729560768,"created":1628729187889,"url":"localhost:9095/produtos-transientes/4","name":"GET Produto Transiente pelo ID","description":"","method":"GET","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1628728954593,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_9c5c2acb1b7549588bb95e6776d7f1fe","parentId":"wrk_103482d5b34647d599ddee06c68eefbe","modified":1628729581106,"created":1628729577172,"url":"localhost:9095/produtos-transientes/4","name":"DELETE Produto Transiente pelo ID","description":"","method":"DELETE","body":{},"parameters":[],"headers":[],"authentication":{},"metaSortKey":-1628728954543,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"env_5b976ae62c25ec9964aba591df709d305318a56a","parentId":"wrk_103482d5b34647d599ddee06c68eefbe","modified":1628728927871,"created":1628728927871,"name":"Base Environment","data":{},"dataPropertyOrder":null,"color":null,"isPrivate":false,"metaSortKey":1628728927871,"_type":"environment"},{"_id":"jar_5b976ae62c25ec9964aba591df709d305318a56a","parentId":"wrk_103482d5b34647d599ddee06c68eefbe","modified":1628728927873,"created":1628728927873,"name":"Default Jar","cookies":[],"_type":"cookie_jar"},{"_id":"spc_dda485c6370545eeb1a8241eaf6dc00f","parentId":"wrk_103482d5b34647d599ddee06c68eefbe","modified":1628728927830,"created":1628728927830,"fileName":"Insomnia","contents":"","contentType":"yaml","_type":"api_spec"}]}
+{
+	"log": {
+		"version": "1.2",
+		"creator": {
+			"name": "Insomnia REST Client",
+			"version": "insomnia.desktop.app:v2021.4.1"
+		},
+		"entries": [
+			{
+				"startedDateTime": "2021-08-19T00:26:07.765Z",
+				"time": 2.968,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:9095/produtos-transientes",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"id\": \"4\",\n  \"nome\": \"Fubá Mimoso 5kg\",\n  \"preco\": 12.15\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Length",
+							"value": "0"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 19 Aug 2021 00:19:22 GMT"
+						}
+					],
+					"content": {
+						"size": 0,
+						"mimeType": "",
+						"text": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 2.968,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "POST Produto Transiente"
+			},
+			{
+				"startedDateTime": "2021-08-19T00:26:07.765Z",
+				"time": 43.539,
+				"request": {
+					"method": "POST",
+					"url": "http://localhost:9095/produtos",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"queryString": [],
+					"postData": {
+						"mimeType": "application/json",
+						"text": "{\n  \"id\": \"4\",\n  \"nome\": \"Fubá Mimoso 5kg\",\n  \"preco\": 12.15\n}",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"name": "Content-Length",
+							"value": "1"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 19 Aug 2021 00:20:48 GMT"
+						}
+					],
+					"content": {
+						"size": 1,
+						"mimeType": "text/plain;charset=UTF-8",
+						"text": "4"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 43.539,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "POST Produto Persistente"
+			},
+			{
+				"startedDateTime": "2021-08-19T00:26:07.765Z",
+				"time": 21.645999999999997,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:9095/produtos-transientes",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 19 Aug 2021 00:19:25 GMT"
+						}
+					],
+					"content": {
+						"size": 251,
+						"mimeType": "application/json",
+						"text": "[{\"id\":\"1\",\"nome\":\"Omo Progress\",\"preco\":29.95},{\"id\":\"2\",\"nome\":\"Mamão Formosa\",\"preco\":4.95},{\"id\":\"3\",\"nome\":\"Cerveja Ipa Opa Epa\",\"preco\":9.75},{\"id\":\"4\",\"nome\":\"Fubá Mimoso 5kg\",\"preco\":12.15},{\"id\":\"4\",\"nome\":\"Fubá Mimoso 5kg\",\"preco\":12.15}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 21.645999999999997,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "GET Produtos Transientes"
+			},
+			{
+				"startedDateTime": "2021-08-19T00:26:07.765Z",
+				"time": 8.274999999999999,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:9095/produtos",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 200,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 19 Aug 2021 00:20:51 GMT"
+						}
+					],
+					"content": {
+						"size": 52,
+						"mimeType": "application/json",
+						"text": "[{\"id\":\"4\",\"nome\":\"Fubá Mimoso 5kg\",\"preco\":12.15}]"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 8.274999999999999,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "GET Produtos Persistentes"
+			},
+			{
+				"startedDateTime": "2021-08-19T00:26:07.765Z",
+				"time": 0,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:9095/produtos-transientes/4",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "GET Produto Transiente pelo ID"
+			},
+			{
+				"startedDateTime": "2021-08-19T00:26:07.765Z",
+				"time": 6.101999999999999,
+				"request": {
+					"method": "GET",
+					"url": "http://localhost:9095/produtos/4",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 404,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 19 Aug 2021 00:21:19 GMT"
+						}
+					],
+					"content": {
+						"size": 132,
+						"mimeType": "application/json",
+						"text": "{\"timestamp\":\"2021-08-19T00:21:19.320+00:00\",\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/produtos/4\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 6.101999999999999,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "GET Produto Persistente pelo ID"
+			},
+			{
+				"startedDateTime": "2021-08-19T00:26:07.765Z",
+				"time": 0,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:9095/produtos-transientes/4",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 0,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"content": {
+						"size": 0,
+						"mimeType": ""
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 0,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "DELETE Produto Transiente pelo ID"
+			},
+			{
+				"startedDateTime": "2021-08-19T00:26:07.765Z",
+				"time": 4.66,
+				"request": {
+					"method": "DELETE",
+					"url": "http://localhost:9095/produtos/4",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [],
+					"queryString": [],
+					"postData": {
+						"mimeType": "",
+						"text": "",
+						"params": []
+					},
+					"headersSize": -1,
+					"bodySize": -1,
+					"settingEncodeUrl": true
+				},
+				"response": {
+					"status": 404,
+					"statusText": "",
+					"httpVersion": "HTTP/1.1",
+					"cookies": [],
+					"headers": [
+						{
+							"name": "Vary",
+							"value": "Origin"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"name": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"name": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"name": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"name": "Date",
+							"value": "Thu, 19 Aug 2021 00:21:46 GMT"
+						}
+					],
+					"content": {
+						"size": 132,
+						"mimeType": "application/json",
+						"text": "{\"timestamp\":\"2021-08-19T00:21:46.980+00:00\",\"status\":404,\"error\":\"Not Found\",\"message\":\"No message available\",\"path\":\"/produtos/4\"}"
+					},
+					"redirectURL": "",
+					"headersSize": -1,
+					"bodySize": -1
+				},
+				"cache": {},
+				"timings": {
+					"blocked": -1,
+					"dns": -1,
+					"connect": -1,
+					"send": 0,
+					"wait": 4.66,
+					"receive": 0,
+					"ssl": -1
+				},
+				"comment": "DELETE Produto Persistente pelo ID"
+			}
+		]
+	}
+}

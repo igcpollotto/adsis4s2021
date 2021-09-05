@@ -7,7 +7,10 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+
+import br.unicesumar.adsis4s2021.pessoa.Pessoa;
 
 @Entity
 public class Pedido {
@@ -19,6 +22,13 @@ public class Pedido {
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name="pedido_id")
 	private List<ItemPedido> itens;
+	
+	//Pessoa    1 [-cliente] ------------------------------> 0..n [-pedidos]  Pedido
+	
+	
+	@ManyToOne
+	@JoinColumn(name="cliente_id")
+	private Pessoa cliente;
 	
 	
 
@@ -39,6 +49,10 @@ public class Pedido {
 	
 	public List<ItemPedido> getItens() {
 		return itens;
+	}
+	
+	public Pessoa getCliente() {
+		return cliente;
 	}
 
 }

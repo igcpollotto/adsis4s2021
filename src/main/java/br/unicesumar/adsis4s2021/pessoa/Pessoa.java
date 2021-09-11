@@ -1,6 +1,7 @@
 package br.unicesumar.adsis4s2021.pessoa;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import br.unicesumar.adsis4s2021.base.BaseEntity;
 
@@ -19,5 +20,9 @@ public class Pessoa extends BaseEntity {
 	public String getNome() {
 		return nome; 
 	} 
-
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+		
 }

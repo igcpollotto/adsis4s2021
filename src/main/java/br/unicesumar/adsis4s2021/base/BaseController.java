@@ -32,7 +32,7 @@ public class BaseController<ENTITY extends BaseEntity, REPO extends JpaRepositor
 	
 	@PostMapping
 	public String post(@RequestBody ENTITY novo) {
-		if (repo.findById(novo.getId()).isPresent()) {
+		if (novo.getId() != null && repo.findById(novo.getId()).isPresent()) {
 			throw new RuntimeException("Seu registro já existe, faça um put ao invés de post!");
 		}
 		novo = repo.save(novo);
@@ -42,7 +42,7 @@ public class BaseController<ENTITY extends BaseEntity, REPO extends JpaRepositor
 	@PutMapping("/{id}")
 	public String put(@RequestBody ENTITY modificado, @PathVariable("id") String id) {
 		if (!modificado.getId().equals(id)) {
-			throw new RuntimeException("Para atualizar um registro, os IDs do request devem ser iguais!");
+			throw new RuntimeException("Para atualizar um registro, os Strings do request devem ser iguais!");
 		}
 		if (!repo.findById(id).isPresent()) {
 			throw new RuntimeException("Seu registro não existe, faça um post ao invés de put!");

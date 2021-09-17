@@ -1,4 +1,4 @@
-package br.unicesumar.adsis4s2021.pedido;
+package br.unicesumar.adsis4s2021.pedido.dto;
 
 import java.math.BigDecimal;
 

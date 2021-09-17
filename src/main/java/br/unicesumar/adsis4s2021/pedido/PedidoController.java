@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.unicesumar.adsis4s2021.pedido.dto.PedidoDTO;
+import br.unicesumar.adsis4s2021.pedido.dto.TotalVendidoDoProdutoDTO;
+
 @RestController
 @RequestMapping("/pedidos")
 public class PedidoController {
@@ -17,8 +20,12 @@ public class PedidoController {
 	private PedidoRepository repo;
 	
 	@GetMapping
-	public List<Pedido> getAll() {
-		return repo.findAll();
+	public List<PedidoDTO> getAll() {
+		List<PedidoDTO> pedidosDTO  = repo.encontrarTodosComoDTO();
+		for (PedidoDTO pedidoDTO : pedidosDTO) {
+			pedidoDTO.setItens(repo.encontrarItensPedidoDoPedidoDTO(pedidoDTO.getId()));
+		}
+		return pedidosDTO;
 	}
 
 	@PostMapping

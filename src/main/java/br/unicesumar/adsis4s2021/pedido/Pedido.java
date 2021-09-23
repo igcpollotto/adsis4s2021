@@ -2,7 +2,6 @@ package br.unicesumar.adsis4s2021.pedido;
 
 import java.util.Date;
 import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -23,15 +22,10 @@ public class Pedido {
 	@JoinColumn(name="pedido_id")
 	private List<ItemPedido> itens;
 	
-	//Pessoa    1 [-cliente] ------------------------------> 0..n [-pedidos]  Pedido
-	
-	
 	@ManyToOne
 	@JoinColumn(name="cliente_id")
 	private Pessoa cliente;
 	
-	
-
 	public Pedido() {
 	}
 

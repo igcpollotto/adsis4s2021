@@ -17,33 +17,25 @@ import br.unicesumar.adsis4s2021.pedido.dto.TotalVendidoDoProdutoDTO;
 @RequestMapping("/pedidos")
 public class PedidoController {
 	@Autowired
-	private PedidoRepository repo;
-	
+	private PedidoService service;
+		
 	@GetMapping
 	public List<PedidoDTO> getAll() {
-		List<PedidoDTO> pedidosDTO  = repo.encontrarTodosComoDTO();
-		for (PedidoDTO pedidoDTO : pedidosDTO) {
-			pedidoDTO.setItens(repo.encontrarItensPedidoDoPedidoDTO(pedidoDTO.getId()));
-		}
-		return pedidosDTO;
+		return service.getAll();
 	}
 
 	@PostMapping
 	public String post(@RequestBody Pedido novo) {
-		if (repo.findById(novo.getId()).isPresent()) {
-			throw new RuntimeException("Seu pedido já existe, faça um put ao invés de post!");
-		}
-		novo = repo.save(novo);
-		return novo.getId();
+		return service.insert(novo);
 	}
 	
 	@GetMapping("/totalVendidoPorProduto")
 	public List<Map<String, Object>> getTotalVendidoPorProduto() {
-		return repo.consultarTotalVendidoPorProduto();
+		return service.consultarTotalVendidoPorProduto();
 	}
 
 	@GetMapping("/totalVendidoPorProdutoDTO")
 	public List<TotalVendidoDoProdutoDTO> getTotalVendidoPorProdutoDTO() {
-		return repo.consultarTotalVendidoPorProdutoDTO();
+		return service.consultarTotalVendidoPorProdutoDTO();
 	}
 }

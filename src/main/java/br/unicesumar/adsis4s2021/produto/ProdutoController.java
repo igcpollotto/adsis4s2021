@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.unicesumar.adsis4s2021.base.BadRequestException;
+import br.unicesumar.adsis4s2021.base.NotFoundException;
+
 @RestController
 @RequestMapping("/produtos")
 public class ProdutoController {
@@ -39,6 +42,7 @@ public class ProdutoController {
 	
 	@GetMapping
 	public List<Produto> getAll() {
+		System.out.println(">>>>> " +   repo.getClass().getName());
 		return repo.findAll();
 	}
 	
@@ -51,16 +55,43 @@ public class ProdutoController {
 		return novo.getId();
 	}
 	
+//	@PutMapping("/{id}")
+//	public String put(@RequestBody Produto modificado, @PathVariable("id") String id) {
+//		if (!modificado.getId().equals(id)) {
+//			throw new RuntimeException("Para atualizar um produto, os IDs do request devem ser iguais!");
+//		}
+//		if (!repo.findById(id).isPresent()) {
+//			throw new RuntimeException("Seu produto não existe, faça um post ao invés de put!");
+//		}
+//		modificado = repo.save(modificado);
+//		return modificado.getId();
+//	}	
+
+//	@PutMapping("/{id}")
+//	public ResponseEntity<String> put(@RequestBody Produto modificado, @PathVariable("id") String id) {
+//		if (!modificado.getId().equals(id)) {
+//			//throw new RuntimeException("Para atualizar um produto, os IDs do request devem ser iguais!");
+//			return ResponseEntity.badRequest().build();
+//		}
+//		if (!repo.findById(id).isPresent()) {
+//			//throw new RuntimeException("Seu produto não existe, faça um post ao invés de put!");
+//			return ResponseEntity.notFound().build();
+//		}
+//		modificado = repo.save(modificado);
+//		return ResponseEntity.ok(modificado.getId());
+//	}	
+
+	
 	@PutMapping("/{id}")
 	public String put(@RequestBody Produto modificado, @PathVariable("id") String id) {
 		if (!modificado.getId().equals(id)) {
-			throw new RuntimeException("Para atualizar um produto, os IDs do request devem ser iguais!");
+			throw new BadRequestException("Para atualizar um produto, os IDs do request devem ser iguais!");
 		}
 		if (!repo.findById(id).isPresent()) {
-			throw new RuntimeException("Seu produto não existe, faça um post ao invés de put!");
+			throw new NotFoundException("Seu produto não existe, faça um post ao invés de put!");
 		}
 		modificado = repo.save(modificado);
 		return modificado.getId();
 	}	
-
+	
 }

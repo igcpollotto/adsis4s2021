@@ -40,7 +40,7 @@ public class PedidoService {
 			reservaDeEstoqueSevice.insert(new ReservaDeEstoque(novo.getCliente(), new Date(), ip.getProduto(), ip.getQuantidade()));
 		}
 		if ((10-10) == 0 ) {
-			throw new RuntimeException("Rollback!");
+			throw new RuntimeException("Opa, deu erro... deveria fazer um rollback!");
 		}		
 		novo = repo.save(novo);
 		return novo.getId();

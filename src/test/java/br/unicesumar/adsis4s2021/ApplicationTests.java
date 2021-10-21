@@ -27,8 +27,8 @@ class ApplicationTests {
 	@Autowired
 	private ObjectMapper jacksonObjectMapper;
 	
-	@MockBean
-	private ProdutoRepository produtoRepository;
+//	@MockBean
+//	private ProdutoRepository produtoRepository;
 
 	@Test
 	void contextLoads() {
@@ -36,8 +36,8 @@ class ApplicationTests {
 	
 	@Test
 	void getAllProdutos() throws Exception {
-		List<Produto> retorno = Arrays.asList(new Produto("1","1",1));		
-		Mockito.when(produtoRepository.findAll()).thenReturn(retorno); 
+//		List<Produto> retorno = Arrays.asList(new Produto("1","1",1));		
+//		Mockito.when(produtoRepository.findAll()).thenReturn(retorno); 
 		
 		mockMvc.perform(get("/produtos")).andExpect(status().is2xxSuccessful());
 		String content = mockMvc.perform(get("/produtos")).andReturn().getResponse().getContentAsString();
